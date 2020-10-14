@@ -17,8 +17,7 @@ import udemy.course.msscbreweryclient.web.model.BeerDto;
 @ExtendWith(MockitoExtension.class)
 class BreweryClientAdapterTest {
 
-  @InjectMocks
-  private BreweryClientAdapter breweryClientAdapter;
+  @InjectMocks private BreweryClientAdapter breweryClientAdapter;
 
   @Mock private BreweryClient breweryClient;
 

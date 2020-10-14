@@ -8,8 +8,7 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
 @SpringBootApplication
 public class MsscBreweryClientApplication {
 
-	public static void main(String[] args) {
-		SpringApplication.run(MsscBreweryClientApplication.class, args);
-	}
-
+  public static void main(String[] args) {
+    SpringApplication.run(MsscBreweryClientApplication.class, args);
+  }
 }

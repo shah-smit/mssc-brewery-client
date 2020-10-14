@@ -9,8 +9,7 @@ import udemy.course.msscbreweryclient.web.model.BeerDto;
 @AllArgsConstructor
 public class BreweryClientAdapter {
 
-  private BreweryClient breweryClient;
-
+  private final BreweryClient breweryClient;
 
   public BeerDto getBeer(UUID uuid) {
     return breweryClient.getBear(uuid).getBody();
