@@ -17,4 +17,13 @@ public class BreweryClientIntegrationTest {
 
     System.out.println(beerDto);
   }
+
+  @Test
+  public void saveBeer() {
+    BeerDto beerDto = BeerDto.builder().build();
+
+    breweryClientAdapter.saveBeer(beerDto);
+
+    System.out.println("Saved Successfully");
+  }
 }
