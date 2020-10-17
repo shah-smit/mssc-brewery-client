@@ -15,22 +15,22 @@ import org.springframework.http.ResponseEntity;
 import udemy.course.msscbreweryclient.web.model.BeerDto;
 
 @ExtendWith(MockitoExtension.class)
-class BreweryClientAdapterTest {
+class BeerClientAdapterTest {
 
-  @InjectMocks private BreweryClientAdapter breweryClientAdapter;
+  @InjectMocks private BeerClientAdapter beerClientAdapter;
 
-  @Mock private BreweryClient breweryClient;
+  @Mock private BeerClient beerClient;
 
   @Test
   public void testShouldGetBrewery() {
     UUID uuid = UUID.randomUUID();
     BeerDto mockBeerDto = BeerDto.builder().build();
-    when(breweryClient.getBear(uuid)).thenReturn(ResponseEntity.ok(mockBeerDto));
+    when(beerClient.getBear(uuid)).thenReturn(ResponseEntity.ok(mockBeerDto));
 
-    BeerDto beerDto = breweryClientAdapter.getBeer(uuid);
+    BeerDto beerDto = beerClientAdapter.getBeer(uuid);
 
     assertNotNull(beerDto);
     assertEquals(mockBeerDto, beerDto);
-    Mockito.verify(breweryClient, Mockito.times(1)).getBear(uuid);
+    Mockito.verify(beerClient, Mockito.times(1)).getBear(uuid);
   }
 }

@@ -7,23 +7,23 @@ import udemy.course.msscbreweryclient.web.model.BeerDto;
 
 @Component
 @AllArgsConstructor
-public class BreweryClientAdapter {
+public class BeerClientAdapter {
 
-  private BreweryClient breweryClient;
+  private BeerClient beerClient;
 
   public BeerDto getBeer(UUID uuid) {
-    return breweryClient.getBear(uuid).getBody();
+    return beerClient.getBear(uuid).getBody();
   }
 
   public void saveBeer(BeerDto beerDto) {
-    breweryClient.addBeer(beerDto);
+    beerClient.addBeer(beerDto);
   }
 
   public void updateBeer(UUID uuid, BeerDto beerDto) {
-    breweryClient.updateBeer(uuid, beerDto);
+    beerClient.updateBeer(uuid, beerDto);
   }
 
   public void deleteBeer(UUID uuid) {
-    breweryClient.deleteBeer(uuid);
+    beerClient.deleteBeer(uuid);
   }
 }

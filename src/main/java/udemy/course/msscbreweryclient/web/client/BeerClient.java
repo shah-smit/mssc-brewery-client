@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import udemy.course.msscbreweryclient.web.model.BeerDto;
 
 @FeignClient(value = "breweryClient", url = "${sfg.brewery.host}")
-public interface BreweryClient {
+public interface BeerClient {
 
   @GetMapping(value = "${sfg.brewery.beer-path}/{beerId}")
   ResponseEntity<BeerDto> getBear(@PathVariable("beerId") UUID beerId);

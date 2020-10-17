@@ -7,13 +7,13 @@ import org.springframework.boot.test.context.SpringBootTest;
 import udemy.course.msscbreweryclient.web.model.BeerDto;
 
 @SpringBootTest
-public class BreweryClientIntegrationTest {
+public class BeerClientIntegrationTest {
 
-  @Autowired private BreweryClientAdapter breweryClientAdapter;
+  @Autowired private BeerClientAdapter beerClientAdapter;
 
   @Test
   public void getBeer() {
-    BeerDto beerDto = breweryClientAdapter.getBeer(UUID.randomUUID());
+    BeerDto beerDto = beerClientAdapter.getBeer(UUID.randomUUID());
 
     System.out.println(beerDto);
   }
@@ -22,7 +22,7 @@ public class BreweryClientIntegrationTest {
   public void saveBeer() {
     BeerDto beerDto = BeerDto.builder().build();
 
-    breweryClientAdapter.saveBeer(beerDto);
+    beerClientAdapter.saveBeer(beerDto);
 
     System.out.println("Saved Successfully");
   }
@@ -32,7 +32,7 @@ public class BreweryClientIntegrationTest {
     UUID uuid = UUID.randomUUID();
     BeerDto beerDto = BeerDto.builder().build();
 
-    breweryClientAdapter.updateBeer(uuid, beerDto);
+    beerClientAdapter.updateBeer(uuid, beerDto);
 
     System.out.println("Updated Successfully");
   }
@@ -41,7 +41,7 @@ public class BreweryClientIntegrationTest {
   public void deleteBeer() {
     UUID uuid = UUID.randomUUID();
 
-    breweryClientAdapter.deleteBeer(uuid);
+    beerClientAdapter.deleteBeer(uuid);
 
     System.out.println("Deleted Successfully");
   }
