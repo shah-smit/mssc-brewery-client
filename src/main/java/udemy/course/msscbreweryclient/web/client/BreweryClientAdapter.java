@@ -22,4 +22,8 @@ public class BreweryClientAdapter {
   public void updateBeer(UUID uuid, BeerDto beerDto) {
     breweryClient.updateBeer(uuid, beerDto);
   }
+
+  public void deleteBeer(UUID uuid) {
+    breweryClient.deleteBeer(uuid);
+  }
 }

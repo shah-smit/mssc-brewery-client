@@ -20,4 +20,7 @@ public interface BreweryClient {
 
   @RequestMapping(method = RequestMethod.PUT, value = "${sfg.brewery.beer-path}/{beerId}")
   void updateBeer(@PathVariable("beerId") UUID beerId, @RequestBody BeerDto beerDto);
+
+  @RequestMapping(method = RequestMethod.DELETE, value = "${sfg.brewery.beer-path}/{beerId}")
+  void deleteBeer(@PathVariable("beerId") UUID beerId);
 }

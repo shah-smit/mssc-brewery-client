@@ -36,4 +36,13 @@ public class BreweryClientIntegrationTest {
 
     System.out.println("Updated Successfully");
   }
+
+  @Test
+  public void deleteBeer() {
+    UUID uuid = UUID.randomUUID();
+
+    breweryClientAdapter.deleteBeer(uuid);
+
+    System.out.println("Deleted Successfully");
+  }
 }
