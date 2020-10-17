@@ -17,4 +17,7 @@ public interface BreweryClient {
 
   @RequestMapping(method = RequestMethod.POST, value = "${sfg.brewery.beer-path}")
   void addBeer(@RequestBody BeerDto beerDto);
+
+  @RequestMapping(method = RequestMethod.PUT, value = "${sfg.brewery.beer-path}/{beerId}")
+  void updateBeer(@PathVariable("beerId") UUID beerId, @RequestBody BeerDto beerDto);
 }

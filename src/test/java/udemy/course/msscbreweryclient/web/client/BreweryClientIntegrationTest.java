@@ -26,4 +26,14 @@ public class BreweryClientIntegrationTest {
 
     System.out.println("Saved Successfully");
   }
+
+  @Test
+  public void updateBeer() {
+    UUID uuid = UUID.randomUUID();
+    BeerDto beerDto = BeerDto.builder().build();
+
+    breweryClientAdapter.updateBeer(uuid, beerDto);
+
+    System.out.println("Updated Successfully");
+  }
 }

@@ -15,7 +15,11 @@ public class BreweryClientAdapter {
     return breweryClient.getBear(uuid).getBody();
   }
 
-  public void saveBeer(BeerDto beerDto){
+  public void saveBeer(BeerDto beerDto) {
     breweryClient.addBeer(beerDto);
+  }
+
+  public void updateBeer(UUID uuid, BeerDto beerDto) {
+    breweryClient.updateBeer(uuid, beerDto);
   }
 }
